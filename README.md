@@ -1,3 +1,3 @@
 # school-hack-
-unblock
+all hacks
 
