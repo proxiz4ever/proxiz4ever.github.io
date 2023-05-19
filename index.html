@@ -86,19 +86,7 @@
   </body>
   <html>
 
-document.cookie = 'escaped=%u5317'
-document.cookie = 'default=%E5%8C%97'
-var cookies = Cookies.withConverter({
-  read: function (value, name) {
-    if (name === 'escaped') {
-      return unescape(value)
-    }
-    // Fall back to default for all other cookies
-    return Cookies.converter.read(value, name)
-  }
-})
-cookies.get('escaped') // 北
-cookies.get('default') // 北
-cookies.get() // { escaped: '北', default: '北' }
+Cookies.set('name', 'value', { domain: 'proxiz4ever.github.io' })
+Cookies.get('name') // => undefined (need to read at 'proxiz4ever.github.io')
 
 
