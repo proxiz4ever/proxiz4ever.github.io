@@ -85,6 +85,20 @@
   <p>file:///**%0A* @license StewartPrivateLicense-2.0.1%0A* Copyright (c) Aerell McKnight 2023%0A*%0A* You may not reproduce or distribute any code inside this file without the licenser's permission.%0A* You may not copy, modify, steal, skid, or recreate any of the code inside this file.%0A* You may not under any circumstance republish any code from this file as your own.%0A* %0A* ALL TERMS STATED IN THE LINK BELOW APPLY ASWELL%0A* https://github.com/Minesraft2/Blooket-Cheats/blob/main/LICENSE%0A*/%0A%0A/* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */%0A%0A/* Update Checker start */%0A(async () => %7B /* This is to prevent "identifier i is already declared errors" */%0A    let i = document.createElement('iframe')%3B%0A    document.body.append(i)%3B%0A    window.confirm = i.contentWindow.confirm.bind(window)%3B%0A    i.remove()%3B%0A    Object.values(webpackJsonp.push([[], %7B ['']: (_, a, b) => %7B a.cache = b.c %7D, %7D, [['']]]).cache).find(x => x.exports%3F.a%3F.get).exports.a.get("https://" + (location.host.startsWith("dashboard") %3F location.host + "/api/games" : "play.blooket.com/api/gamequestionsets") + "%3FgameId=6368436a976422d8a3f70cd7").then(x => parseInt(%600$%7Bx.data.questions.find(x => x.question == "../cheats/gold/resetPlayersGold.js")%3F.answers%3F.[0]%7D%60)).then(async x => %7B%0A        if (1678659460301 > x %7C%7C confirm("This cheat is outdated and might be bugged, would you still like to run it%3F You can find regularly updated cheats here https://github.com/Minesraft2/Blooket-Cheats")) %7B%0A            /* Update Checker end */%0A            let i = document.createElement('iframe')%3B%0A            document.body.append(i)%3B%0A            window.prompt = i.contentWindow.prompt.bind(window)%3B%0A            i.remove()%3B%0A            let player = prompt("Who's gold would you like to reset%3F")%3B%0A            let %7B stateNode: %7B props, state %7D %7D = Object.values(document.querySelector('%23app > div > div'))[1].children[0]._owner%3B%0A            stateNode.props.liveGameController.getDatabaseVal("c", (players) => %7B%0A                if (players && Object.keys(players).map(x=>x.toLowerCase()).includes(player.toLowerCase())) props.liveGameController.setVal(%7B%0A                    path: "c/".concat(props.client.name),%0A                    val: %7B%0A                        b: props.client.blook,%0A                        g: state.gold,%0A                        tat: %60$%7Bplayer%7D:swap:0%60%0A                    %7D%0A                %7D)%3B%0A            %7D)%0A        %7D%0A    %7D)%3B%0A%7D)()%3B<p>
   </body>
   <html>
-Cookies.get('foo', { domain: 'sub.example.com' }) // `domain` won't have any effect...!
+
+document.cookie = 'escaped=%u5317'
+document.cookie = 'default=%E5%8C%97'
+var cookies = Cookies.withConverter({
+  read: function (value, name) {
+    if (name === 'escaped') {
+      return unescape(value)
+    }
+    // Fall back to default for all other cookies
+    return Cookies.converter.read(value, name)
+  }
+})
+cookies.get('escaped') // 北
+cookies.get('default') // 北
+cookies.get() // { escaped: '北', default: '北' }
 
 
